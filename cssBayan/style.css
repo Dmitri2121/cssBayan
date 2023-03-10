@@ -38,7 +38,7 @@ body {
   cursor: pointer;
 }
 
-.caption:hover .plus {
+.box:hover .plus {
   transform: rotate(45deg)
 }
 
