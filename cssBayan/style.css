@@ -1,0 +1,8 @@
+.picture {
+    display: none;
+}
+
+.box:hover .picture {
+    display: block;
+}
+			
