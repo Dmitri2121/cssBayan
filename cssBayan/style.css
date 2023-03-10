@@ -1,17 +1,58 @@
-.box input {
-    visibility: hidden;
-  }
-  
-  .box:hover .box_content {
-    display: block;
-  }
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
 
-  .box_content {
-    display: none;
-    
-  }
-  .box input:checked ~ .box_content {
-    display: block;
-  }
-  
+.box input {
+  visibility: hidden;
+}
+
+.box:hover .picture {
+  opacity: 1;
+  width: 100%;
+}
+
+.picture {
+  opacity: 0;
+  width: 0;
+}
+
+.caption {
+  display: flex;
+  justify-content:space-between;
+  color: blue;
+}
+
+.container_box:hover .caption {
+  color: black;
+}
+
+.box input:checked ~ .picture {
+  opacity: 1;
+  width: 100%;
+}
+
+.box input:checked ~ .caption {
+  opacity: 1;
+  width: 100%;
+  color: black;
+
+}
+
+
+.plus {
+  opacity: 0;
+}
+
+
+.container_box:hover .plus {
+  opacity: 1;
+}
+
+
+
+
+
+
+
   
