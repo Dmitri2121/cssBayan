@@ -1,8 +1,17 @@
-.picture {
-    display: none;
-}
-
-.box:hover .picture {
+.box input {
+    visibility: hidden;
+  }
+  
+  .box:hover .box_content {
     display: block;
-}
-			
+  }
+
+  .box_content {
+    display: none;
+    
+  }
+  .box input:checked ~ .box_content {
+    display: block;
+  }
+  
+  
