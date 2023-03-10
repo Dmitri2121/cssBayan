@@ -1,3 +1,7 @@
+body {
+  background-color: bisque;
+}
+
 .container {
   width: 60%;
   margin: 0 auto;
@@ -9,36 +13,50 @@
 
 .box:hover .picture {
   opacity: 1;
-  width: 100%;
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
 }
 
 .picture {
   opacity: 0;
   width: 0;
+  margin-left: 25%;
+  transition: 0.3s;
 }
 
 .caption {
   display: flex;
   justify-content:space-between;
   color: blue;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .container_box:hover .caption {
   color: black;
+  cursor: pointer;
+}
+
+.caption:hover .plus {
+  transform: rotate(45deg)
 }
 
 .box input:checked ~ .picture {
   opacity: 1;
-  width: 100%;
+  width: 50%;
 }
 
 .box input:checked ~ .caption {
   opacity: 1;
   width: 100%;
   color: black;
-
+  
 }
 
+.box input:checked ~ .caption .plus {
+  transform: rotate(45deg)
+}
 
 .plus {
   opacity: 0;
@@ -47,11 +65,33 @@
 
 .container_box:hover .plus {
   opacity: 1;
+  cursor: pointer;
+  
+}
+
+.container_box {
+  cursor: pointer;
+}
+
+.caption {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-top: 0.1em solid gray;
 }
 
 
 
+@media (max-width: 820px) {
+  .caption {
+    font-size: 1.1rem;
+  }
+}
 
+@media (max-width: 320px) {
+  .caption {
+    font-size: 0.7rem;
+  }
+}
 
 
 
