@@ -1,0 +1,126 @@
+body {
+    background-color: bisque;
+  }
+
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .box input {
+    visibility: hidden;
+  }
+  
+  .picture {
+    opacity: 0;
+    width: 0;
+    margin-left: 25%;
+    transition: 0.9s;
+  }
+  
+  .caption {
+    display: flex;
+    justify-content:space-between;
+    color: blue;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .box input:checked ~ .picture {
+    opacity: 1;
+    width: 50%;
+  }
+  
+  .box input:checked ~ .caption {
+    opacity: 1;
+    width: 100%;
+    color: black;
+  }
+  
+  .box input:checked ~ .caption .plus {
+    transform: rotate(45deg)
+  }
+  
+  .plus {
+    opacity: 0;
+  }
+  
+  .container_box {
+    cursor: pointer;
+  }
+  
+  .caption {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-top: 0.1em solid gray;
+  }
+
+  .box:active .picture {
+    opacity: 1;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+  }
+
+  .container_box:active .caption {
+    color: black;
+    cursor: pointer;
+  }
+  
+  .container_box:active .plus {
+    opacity: 1;
+    cursor: pointer;
+    
+  }
+
+  .box:active .plus {
+    transform: rotate(45deg)
+  }
+
+
+
+  @media (hover: hover) {
+
+    .box:hover .picture {
+      opacity: 1;
+      width: 50%;
+      height: 50%;
+      cursor: pointer;
+    }
+
+    .container_box:hover .caption {
+      color: black;
+      cursor: pointer;
+    }
+    
+    .container_box:hover .plus {
+      opacity: 1;
+      cursor: pointer;
+      
+    }
+
+    .box:hover .plus {
+      transform: rotate(45deg)
+    }
+
+}
+
+
+
+@media (max-width: 820px) {
+  .caption {
+    font-size: 1.1rem;
+  }
+
+  
+}
+
+@media (max-width: 320px) {
+  .caption {
+    font-size: 0.7rem;
+  }
+}
+
+
+
+  
